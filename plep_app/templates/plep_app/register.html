@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+
+{% block title %}CSC 320 || Registration{% endblock title %}
+
+{% block content %}
+
+    {% load static %}
+    {% include "navbar.html" %}
+
+    <link rel="stylesheet" href="{% static 'plep_app/css/plep_app.css' %}">
+
+
+    <div class="form-wrapper">
+        <h2 class="reg">Register here!</h2>
+        <form class="form" action="" method="POST">
+            {% csrf_token %}
+    
+            {{ form.as_p }}
+    
+            <button type="submit" class="btn-link">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        let radio = document.querySelector('input[value="Individual"]');
+        let noLabel = document.querySelectorAll('label[for="id_no_of_member"]');  
+        let noInput = document.querySelectorAll('input[type="number"]');  
+              
+
+        showNumber = function() {
+            //     for(let i=0; i<noneValues.length; i++) {
+            //     noneValues[i].style.dispaly = "block";
+            // }
+            noLabel.style.display = "block";
+        }
+        radio.addEventListener('click', showNumber);   
+          
+    </script>
+
+    {% endblock content %}

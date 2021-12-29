@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block title %}PLEP || Tech{% endblock title %}
+
+
+{% block content %}
+
+{% include "navbar.html" %}
+
+<link rel="stylesheet" href="{% static 'plep_app/css/plep_app.css' %}">
+
+<section class="home" id="home">
+    <div class="text-wrapper">
+        <h1 class="text-1">We offer modern solutions for your CSC 320 Projects</h1>
+        <p class="text-2">We are team of talented programmers bringing your project to live.</p>
+        <a class="btn-link" href="{% url 'csc320' %}">Get Started</a>
+    </div>
+    <div class="home-img">
+        <img src="{% static 'plep_app/img/home-img.png' %}" alt="home-img">
+    </div>
+</section>
+
+
+{% endblock content %}

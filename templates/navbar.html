@@ -1,0 +1,41 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+<nav class="nav-con">
+      <!-- logo -->
+      <div class="logo">
+          <img src="{% static 'img/logo.png' %}" alt="logo">
+      </div>
+    <!-- toggler div -->
+    <div class="menu-con"">
+        <ul class="hambugger">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <!-- toggler button -->
+    <div class="toggle-btn" onclick="toggle()">
+        <i class="fas fa-bars"></i>
+    </div>
+</nav>
+
+<script>
+
+    let menu = document.querySelector('.nav-con .menu-con');
+    let toggleBtn = document.querySelector('.toggle-btn');
+    
+    let menuIsOpen = false;
+
+    function toggle() {
+        if (menuIsOpen === false) {
+            menu.style.display = "none";  
+            menuIsOpen = true;
+        } else {
+            menu.style.display = "block";
+            menuIsOpen = false;
+        }
+    }
+</script>

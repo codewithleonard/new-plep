@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+
+{% block title %}CSC 320{% endblock title %}
+
+{% block content %}
+
+    {% load static %}
+    {% include "navbar.html" %}
+
+        <link rel="stylesheet" href="{% static 'plep_app/css/plep_app.css' %}">
+
+        <section class="home">
+            <div class="text-wrapper">
+                    <h1 class="text-1">Register below to book your CSC 320 project and get your unique ID(UID) to continue.</h1>
+                    <div class="link-con">
+                        <a class="btn-link" href="{% url 'register' %}">Register</a>
+                        <a class="btn-link" href="{% url 'uid_verification' %}">Enter UID</a>
+                    </div>
+            </div>
+                <div class="home-img">
+                    <img src="{% static 'plep_app/img/csc-img.png' %}" alt="home-img">
+                </div>
+        </section>
+
+{% endblock content %}
