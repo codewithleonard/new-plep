@@ -12,6 +12,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    height: 50px;
     width: 100%;
     background-color: #B1D0E0;
     padding:0 50px;
@@ -79,6 +80,9 @@
     padding: -0 8px;
     border-radius: 5px;
     cursor: pointer;
+}
+.toggle-btn:active {
+    background-color: #6998AB;
 }
 
 

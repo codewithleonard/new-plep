@@ -1,0 +1,44 @@
+
+<style>
+    .copyright-con {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 8%;
+        background-color: #1A374Ddd;
+    }
+    .copyright-text {
+        font-size: 15px;
+        margin-top: 12px;
+        color: #fff;
+        text-align: center;
+    }
+    #year {
+        color: #fff;
+    }
+
+    @media screen and (max-width: 410px) {
+        .copyright-text {
+            margin-top: 10;
+            line-height: 1;
+        }
+    }
+</style>
+
+
+
+
+<footer class="copyright-con">
+    <p class="copyright-text">
+        copyright : <span id="year"></span> <i class="far fa-copyright"></i> PLEP softwares all right and reserved
+    </p>
+</footer>
+
+
+
+
+<script>
+    let year = new Date().getFullYear();
+    document.getElementById('year').innerText = year;
+</script>

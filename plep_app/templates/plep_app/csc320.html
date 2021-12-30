@@ -9,17 +9,26 @@
 
         <link rel="stylesheet" href="{% static 'plep_app/css/plep_app.css' %}">
 
+        <style>
+            .btn-link {
+                margin: 8px 0;
+                width: 200px;
+            }
+        </style>
+
         <section class="home">
             <div class="text-wrapper">
                     <h1 class="text-1">Register below to book your CSC 320 project and get your unique ID(UID) to continue.</h1>
                     <div class="link-con">
-                        <a class="btn-link" href="{% url 'register' %}">Register</a>
-                        <a class="btn-link" href="{% url 'uid_verification' %}">Enter UID</a>
+                        <a class="btn-link" href="{% url 'plep_app:register' %}">Register</a>
+                        <a class="btn-link" href="{% url 'plep_app:uid_verification' %}">Enter UID</a>
                     </div>
             </div>
                 <div class="home-img">
                     <img src="{% static 'plep_app/img/csc-img.png' %}" alt="home-img">
                 </div>
         </section>
+
+        {% include "footer.html" %}
 
 {% endblock content %}

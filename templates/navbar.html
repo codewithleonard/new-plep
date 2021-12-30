@@ -8,7 +8,7 @@
     <!-- toggler div -->
     <div class="menu-con"">
         <ul class="hambugger">
-            <li><a href="#" class="active">Home</a></li>
+            <li><a href="{% url 'plep_app:home' %}" class="active">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Projects</a></li>
@@ -30,11 +30,11 @@
     let menuIsOpen = false;
 
     function toggle() {
-        if (menuIsOpen === false) {
-            menu.style.display = "none";  
+        if ( ! menuIsOpen) {
+            menu.style.display = "block";  
             menuIsOpen = true;
         } else {
-            menu.style.display = "block";
+            menu.style.display = "none";
             menuIsOpen = false;
         }
     }
