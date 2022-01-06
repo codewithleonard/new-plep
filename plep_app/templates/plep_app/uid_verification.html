@@ -20,6 +20,15 @@
         .uid-field {
             margin-top: 20px;
         }
+        .error {
+            color: red;
+            margin-bottom: -15px;
+            margin-top: 5px;
+            padding-top: 5px;
+            display: block;
+            font-size: 14px;
+            text-align: center;
+        }
 
         @media screen and (max-width: 960px)  {
             .form-wrapper {
@@ -43,6 +52,7 @@
         <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <h2 class="reg">Enter your UID</h2>
+                <span class="error">{{ err }}</span>
             <input type="text" name="uid" class="uid-field" required>
             <input type="submit" class="btn-link">
         </form>

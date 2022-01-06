@@ -1,0 +1,44 @@
+{% extends "main.html" %}
+
+{% block title %}CSC 320{% endblock title %}
+
+{% block content %}
+
+    {% load static %}
+    {% include "navbar.html" %}
+
+    <link rel="stylesheet" href="{% static 'plep_app/css/plep_app.css' %}">
+
+    <style>
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .container h1, .container p {
+            text-align: center;
+        }
+        strong {
+            text-decoration: underline;
+        }
+        .container a {
+            display: block;
+            align-self: center;
+            width: 200px;
+            margin: auto;
+        }
+    </style>
+
+        <div class="container">
+            <h1>Registration Successful</h1>
+            <p class="text-2"><strong>NOTE:</strong><br>We will send your UID to your email,
+                <br> and the details on how to made the payment <br> which you will use to access your dashboard..</p>
+            <p class="text-2">Thanks.</p>
+
+            <a class="btn-link" href="{% url 'plep_app:uid_verification' %}">Enter UID</a>
+        </div>
+
+
+
+    {% include "footer.html" %}
+
+{% endblock content %}

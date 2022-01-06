@@ -32,7 +32,11 @@
 
     <div class="form-wrapper">
         <h2 class="reg">Register here!</h2>
-        <p class="error"> <i class="fa fa-question" aria-hidden="true"></i> error messages</p>
+        <p class="error"> <i class="fa fa-question" aria-hidden="true"></i>
+            {% for message in messages %}
+              {{ message.error }}
+            {% endfor %}
+        </p>
         <form class="form" action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
     
