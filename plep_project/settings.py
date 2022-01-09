@@ -133,3 +133,9 @@ if not DEBUG:
     EMAIL_HOST_PASSWORD = 'bcwvkfhdzulzbntj'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    print("Production Environment")
